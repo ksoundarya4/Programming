@@ -7,7 +7,7 @@ import com.bridgelabs.util.utilclass;
 
 public class AddsToZero {
 	
-	public int[] ReadInteger()
+	public static int[] ReadInteger()
 	{
 		System.out.println("Enter number of intergers to be read");
 		int N = utilclass.InputInteger();
@@ -22,7 +22,7 @@ public class AddsToZero {
 	    return arr;
 	}
 	
-	public void Triplets(int[] nums)
+	public static void Triplets(int[] nums)
 	{
 		int count = 0;
 		List l = new ArrayList();
@@ -45,5 +45,12 @@ public class AddsToZero {
 	System.out.println("Number of triplets ="+count);
 	System.out.println(l);
 	}
-
+	
+	public static void main(String[] args)
+	{
+		
+		int[] a = ReadInteger();
+			Triplets(a);
+			
+	}
 }

@@ -4,10 +4,9 @@ import com.bridgelabs.util.utilclass;
 
 public class PrimeFactors {
 	
-	public void PrintPrimeFactor()
+	public static void PrintPrimeFactor(int N)
 	{
-		System.out.println("Number to find prime factors");
-		int N = utilclass.InputInteger();
+	
 		
 		if(utilclass.isPrime(N))
 			System.out.println(N);  //if Number is prime then it has no prime factors.
@@ -29,5 +28,12 @@ public class PrimeFactors {
 		}
 		
 	}
+	
+		public static void main(String[] args)
+		{
+			System.out.println("Number to find prime factors");
+			int N = utilclass.InputInteger();
+			PrintPrimeFactor(N);
+		}
 
 }

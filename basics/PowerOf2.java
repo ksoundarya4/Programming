@@ -4,25 +4,9 @@ import com.bridgelabs.util.utilclass;
 
 public class PowerOf2 {
 	
-	private int N;
-	
-	
-	public int getN() {
-		return N;
-	}
 
-	public void setN(int n) {
-		
-		System.out.println("Enter a Number");
-		n = utilclass.InputInteger();
-		if(n>0 && n<31)
-		N = n;
-		
-		
-	}
-	
 
-	public void PrintPowerOf2()
+	public static void PrintPowerOf2(int N)
 
 	{
 		int[] power = new int[N];
@@ -31,8 +15,16 @@ public class PowerOf2 {
 		{
 			 power[i] = 2*power[i-1];
 			 System.out.println("2 Power of "+i+ "=" +power[i]);
+			 
+		//	 System.out.println(Math.pow((double)2,(double)i));
 		}
 		
 	}
 
+	public static void main(String[] args)
+	{
+		System.out.println("Enter an integer to printpowerof2");
+		int num = utilclass.InputInteger();
+		PrintPowerOf2(num);
+	}
 }

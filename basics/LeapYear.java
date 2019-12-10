@@ -4,30 +4,26 @@ import com.bridgelabs.util.utilclass;
 
 public class LeapYear {
 	
-	private int year ;
 	
-	public int getYear() {
-		return year;
-	}
 
-	public void setYear(int y)
+	public static boolean IsLeapYear(int year)
 	{
-	
-		if(utilclass.NumberOfDigits(y) == 4)
-			this.year = y;
-		else
+		if(utilclass.NumberOfDigits(year)==4)
 		{
-			System.out.println("Enter Correct year format");
-			throw new NullPointerException();
-		}
-	}
-
-	public boolean IsLeapYear()
-	{
-		
 		if((year % 400 == 0) || ((year % 4 ==0) && (year % 100!=0)))
 				return true;
 		
 		return false;
 		}
+		else 
+			return false;
+		}
+	
+	public static void main(String[] args)
+	{
+		System.out.println("Enter year to find LeapYear");
+		int y = utilclass.InputInteger();
+		System.out.println(IsLeapYear(y));
+	
+	}
 }

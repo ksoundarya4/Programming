@@ -4,7 +4,7 @@ import com.bridgelabs.util.utilclass;
 
 public class Array2D {
 	
-	public void Integer2DArray()
+	public static void Integer2DArray()
 	{
 		System.out.println("Enter number of rows");
 		int rows = utilclass.InputInteger();
@@ -32,7 +32,7 @@ public class Array2D {
 		}
 	}
 
-	public void double2DArray()
+	public static void double2DArray()
 	{
 		System.out.println("Enter number of rows");
 		int rows = utilclass.InputInteger();
@@ -60,7 +60,7 @@ public class Array2D {
 		}
 	}
 	
-	public void boolean2DArray()
+	public static void boolean2DArray()
 	{
 		System.out.println("Enter number of rows");
 		int rows = utilclass.InputInteger();
@@ -88,7 +88,7 @@ public class Array2D {
 		}
 	}
 	
-	public void SelectArray(String s)
+	public static void SelectArray(String s)
 	{
 		if(s.equals("InterArray"))
 			Integer2DArray();
@@ -99,5 +99,13 @@ public class Array2D {
 			
 			if(s.equals("BooleanArray"))
 				boolean2DArray();
+	}
+	
+	public static void main(String[] args)
+	{
+		
+		System.out.println("Enter which array to to use: InterArray,DoubleArray or BooleanArray");
+		String s = utilclass.InputString();
+		SelectArray(s);
 	}
 }

@@ -3,7 +3,8 @@ package com.bridgelabs.basics;
 import com.bridgelabs.util.utilclass;
 
 public class FlipCoin {
-	public  double ToFlipCoin()
+	
+	public static double ToFlipCoin()
 	{
 		System.out.println("Enter number of times to Flip a Coin");
 		int N = utilclass.InputInteger();
@@ -22,5 +23,11 @@ public class FlipCoin {
 		 double res = (H/T);
 		 return res;
 	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println(FlipCoin.ToFlipCoin());
+	}
+	
 
 }
