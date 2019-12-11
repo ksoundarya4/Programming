@@ -10,10 +10,12 @@ public class TicTacToe {
 	private static final int colms = 3;
 	private static final String NoInput= "   ";
 	
+	//to assign board with 3 rows and 3 coloums
 	public TicTacToe() {
 		this.board = new String[rows][colms];
 	}
 	
+	//to initialize board with no values
 	public void InitializeBoard()
 	{
 		for(int i =0; i<rows; i++)
@@ -25,6 +27,7 @@ public class TicTacToe {
 		}
 	}
 	
+	//to Print the board status
 	public String PrintBoard()
 	{
 		String strBoard = "";
@@ -44,13 +47,14 @@ public class TicTacToe {
 		return strBoard;
 	}
 
-	
+	//to set player inputs to board
 	public void setPlay(int i, int j , String str)
 	{
 		if(this.board[i][j].matches(NoInput))
 			this.board[i][j] = str;
 	}
 	
+	//to check the board if there is any winner
 	public boolean isGameOver()
 	{
 		for(int i = 0; i<rows; i++)
@@ -110,7 +114,7 @@ public class TicTacToe {
 			
 			if(game.isGameOver())
 			{
-				System.out.println(game.PrintBoard()+"\n"+"Player "+Player+"Wins");
+				System.out.println(game.PrintBoard()+"\n"+"Player "+Player+" Wins");
 				break;
 			}
 			

@@ -22,7 +22,6 @@ public class CouponNumber {
 		{
 			arr[i] = GenerateRandom();
 			count++;
-			int check = arr[i];
 				for(int j = 0; j<i ; j++)
 				{
 					if(arr[i] == arr[j])
