@@ -81,5 +81,70 @@ public class utilclass {
 		
 	}
 	
+	//To convert Temperature from Celsius to Fahrenheit and visaversa
+	public static void TempConversion(float temp,int ch)
+	{
+		switch(ch)
+		{
+		case 1 : temp = (temp*9/5)+32;
+					System.out.print("Temperature from Celsius to Fahrenheit is : "+temp);
+					break;
+		case 2 : temp = (temp - 32)*5/9;
+					System.out.print("Temperature from Fahrenheit to Celsius is : "+temp);
+					break;
+		default : System.out.println("Enter valid case");
+		}
+	}
 
+	//To calculate monthlyPayment
+	public static double MontlyPayment(int P , int Y , int R)
+	{
+		int n = 12*Y;
+		double r = 1.0*R/(12*100);
+		
+		double payment = (P*r)/(1-Math.pow((1+r), (-n)));
+		
+		return payment;
+	}
+	
+	//To claculate Square root using Newtons Method
+	
+	public static double sqrt(int num)
+	{
+		double t = num;
+		double epsilon = 1e-15;
+		
+		while(Math.abs(t-num/t) > epsilon*t)
+		{
+			t = (num/t + t)/2.0;
+			
+			}
+		return t;
+		}
+	
+	//To Convert integer to binary form(base 2)
+	public static int[] toBinary(int num)
+	{
+		
+		int[] arr = new int[16];
+	
+		int i =0;
+		while(num>0)
+		{
+			arr[i] = num%2;
+			num = num/2;
+			i++;
+		}
+		//Swapping elements in an array
+		for(int j=0; j< (arr.length-1)/2 ; j++)
+		{
+			
+			arr[j] = arr[j] ^ arr[arr.length-1-j];
+			arr[arr.length-1-j] = arr[j] ^ arr[arr.length-1-j];
+			arr[j] = arr[j] ^ arr[arr.length-1-j];
+		}
+		
+	return arr;	
+	}
+	
 }
