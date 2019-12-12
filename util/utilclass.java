@@ -2,8 +2,9 @@ package com.bridgelabs.util;
 
 import java.util.Scanner;
 
-public class utilclass<T> {
+public class utilclass {
 	
+	//To get String input from keyboard
 	public static String InputString()
 	{
 		Scanner sc1 = new Scanner(System.in);
@@ -12,6 +13,7 @@ public class utilclass<T> {
 		
 	}
 	
+	//To get Integer type input from Keyboard
 	public static int InputInteger()
 	{
 		
@@ -20,6 +22,7 @@ public class utilclass<T> {
 		 return i;
 		}
 	
+	//To get Double type input from Keyboard
 	public static double InputDouble()
 	{
 		Scanner sc1 = new Scanner(System.in);
@@ -27,13 +30,15 @@ public class utilclass<T> {
 		return d;
 		}
 	
+	//To get boolean input from keyboard
 	public static boolean InputBoolean()
 	{
 		Scanner sc1 = new Scanner(System.in);
 		boolean b = sc1.nextBoolean();
 		return b;
 	}
-	 
+	
+	//To get number of digits in an Integer
 	public static int NumberOfDigits(int num)
 	 {
 		int count = 0;
@@ -45,6 +50,7 @@ public class utilclass<T> {
 		return count;
 	 }
 	
+	//To verify a number is Prime or not
 	public static boolean isPrime(int num)
 	{
 		if(num==0 || num ==1)
@@ -64,5 +70,16 @@ public class utilclass<T> {
 		return true;
 	}
 
+	//To find day of the date
+	public static int Day(int year, int month ,int date)
+	{
+		 year = year - (14-month)/12;
+		int x = year + (year/4) - (year/100) + (year/400);
+		 month = month + 12*((14-month)/12)-2;
+		
+		return (date+x+(31*month)/12)%7;
+		
+	}
+	
 
 }
