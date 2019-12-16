@@ -9,7 +9,7 @@ public class Gambler {
 		int goal = Integer.parseInt(args[1]);
 		int trails = Integer.parseInt(args[2]);
 		
-		//Initialize number of wins and bets to Zeo
+		//Initialize number of wins and bets to Zero
 		
 		int wins = 0;
 		int bets = 0;
@@ -33,6 +33,7 @@ public class Gambler {
 		System.out.println("Percentage of wins = "+(100.0*wins)/trails);
 		System.out.println("Average of bets = "+(1.0*bets)/trails);
 	}
+	
 	
 
 }

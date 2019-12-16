@@ -147,4 +147,15 @@ public class utilclass {
 	return arr;	
 	}
 	
+	//To check for palindrome
+	public static boolean isPalindrome(String s)
+	{
+		StringBuilder sb = new StringBuilder(s);
+	String str = new String(sb.reverse());
+		
+		if(str.equals(s))
+		 return true;
+		
+		return false;
+	}
 }

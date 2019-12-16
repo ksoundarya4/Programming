@@ -25,14 +25,23 @@ public class CouponNumber {
 		int[] arr = new int[N];
 		
 		
+		
 		for(int i = 0; i<N; i++)
 		{
 			arr[i] = GenerateRandom(N);
-			count++;
+			l.add(arr[i]);
+		}
+		System.out.println(l);
+		
+		for(int i =0; i<N; i++)
+		{
+			int key = arr[i];
+			if(l.contains(key))
+				l.remove(key);
 		}
 		
-		
-		
+		System.out.println(l);
+	//	System.out.println("Random Numbers generated are = "+count);
 	}				
 	
 

@@ -1,17 +1,31 @@
 package com.bridgelabs.AlgorithmPrograms;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.bridgelabs.util.utilclass;
 
 public class PrintPrime {
 
 	public static void main(String[] args)
 	{
-		for(int i = 0; i<=1000; i++)
+//	List<String> l = new ArrayList<String>();
+//	String[] str = null;
+	for(int i = 0; i<=1000; i++)
 		{
-			if(utilclass.isPrime(i))
-				System.out.println(i);
+		//To find prime numbers in 0-1000 range
+			//and to check palindrome
+			
+			String s = Integer.toString(i);
+			
+		if(utilclass.isPrime(i) && utilclass.isPalindrome(s))
+		System.out.println(i);
+	
+		
 		}
-
+		
+	
+		
 	}
 
 }
