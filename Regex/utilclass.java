@@ -1,4 +1,4 @@
-package com.bridgelabs.util;
+package com.bridgelabs.Regex;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
