@@ -23,9 +23,6 @@ public class CouponNumber {
 		Set<Integer> s = new HashSet<Integer>();
 		
 		
-		
-		
-		
 		for(int i = 0; i<N; i++)
 		{
 			
