@@ -20,7 +20,8 @@ public class Node<T>
 		this.position = position;
 	}
 	
-	public T getData()
+	
+		public T getData()
 	{
 		return data;
 	}
@@ -37,6 +38,6 @@ public class Node<T>
 		this.next = next;
 	}
 	
-	
+
 
 }

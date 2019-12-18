@@ -207,4 +207,42 @@ public class utilclass {
 				}	
 			}
 		}
+		
+		   public static String[] ReadFile(String path)
+		   {
+			   //To read list of word seperated by comma from a file
+			   BufferedReader br = null;
+			  
+			   
+			   //To store the words
+			   String[] value = null;
+			   
+			 try
+			 {
+				   br = new BufferedReader( new FileReader(path));
+				   String line;
+				   while((line = br.readLine())!=null)
+					   value = line.split(" ");
+			    }
+		   
+			  catch(Exception e)
+			  {
+				  e.printStackTrace();
+			  }
+		   finally
+		   {
+			   try
+			   {
+				   if(br!=null)
+					   br.close();
+			   }
+			   catch(Exception e)
+			   {
+			   e.printStackTrace();
+			   }
+			  
+		   }
+			 return value;
+		 }
+		   
 }
