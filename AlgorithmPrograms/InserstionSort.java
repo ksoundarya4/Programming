@@ -45,6 +45,7 @@ public static  void InsertionSortStrings(String s)
 		Scanner sc1 = new Scanner(System.in);
 		System.out.println("Enter a sentence to sort");
 		String s = sc1.nextLine();
+		sc1.close();
 		InsertionSortStrings(s);
 	}
 	

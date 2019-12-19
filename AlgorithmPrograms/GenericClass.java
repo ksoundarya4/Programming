@@ -1,8 +1,7 @@
 package com.bridgelabs.AlgorithmPrograms;
 
-import java.util.Arrays;
 
-import com.bridgelabs.util.utilclass;
+import java.util.Arrays;
 
 public class GenericClass<T>
 {

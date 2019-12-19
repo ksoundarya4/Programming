@@ -74,6 +74,6 @@ public class BinarySearch
 		   System.out.println("Word is present in a file");
 	   else
 		   System.out.println("Word is not present in a file");
-	   
+	   sc1.close();
    }
 }

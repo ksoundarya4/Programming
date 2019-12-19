@@ -124,7 +124,7 @@ public class TicTacToe {
 				Player = "1";
 		}while(true);
 		
-		
+		input.close();
 		
 	}
 }

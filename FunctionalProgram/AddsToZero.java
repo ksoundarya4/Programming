@@ -25,7 +25,7 @@ public class AddsToZero {
 	public static void Triplets(int[] nums)
 	{
 		int count = 0;
-		List l = new ArrayList();
+		List<String> l = new ArrayList<String>();
 		
 		for(int i= 0 ;i<nums.length-2;i++)
 		{

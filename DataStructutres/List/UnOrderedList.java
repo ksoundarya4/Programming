@@ -1,8 +1,7 @@
 package com.bridgelabs.DataStructutres.List;
 
-import com.bridgelabs.DataStructutres.List.*;
 
-public class UnOrderedList<T> 
+public class UnOrderedList<T extends Comparable<T>>
 {
 	private Node<T> head;
 	private Node<T> last;
@@ -42,9 +41,9 @@ public class UnOrderedList<T>
 	}
 	
 	//To search for data
-	public <T extends Comparable<T>> boolean Search(T data)
+	public  boolean Search(T data)
 	{
-		Node<T> temp = (Node<T>) head;
+		Node<T> temp = head;
 		
 		while(temp!=null)
 		{
@@ -68,13 +67,13 @@ public boolean Remove(T data)
 	Node<T> temp =  head;
 	Node<T> prev = null;
 	
-	if(temp != null && temp.getData().equals(data))
+	if(temp != null && temp.getData().compareTo(data)==0)
 	{
 		head = temp.getNext();
 		size--;
 		return true;
 	}
-	while(temp != null && (!temp.getData().equals(data)))
+	while(temp != null && (temp.getData().compareTo(data)!=0))
 			{
 		prev = temp;
 		temp = temp.getNext();
