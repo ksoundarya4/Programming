@@ -22,7 +22,9 @@ public class TestOrderedList {
 			l.Remove(input);
 		else
 			l.add(input);
-System.out.println(l);		
+System.out.println(l);	
+System.out.println(l.pop());
+System.out.println(l);
 
 		
 	}

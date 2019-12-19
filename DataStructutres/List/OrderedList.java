@@ -119,8 +119,21 @@ public boolean search(T data)
 	
 }
 
-
+//To remove and return last item in list
+public T pop()
+{
+		T data = null;
+		Node<T> temp = head;
+		while(temp.getNext().getNext()!=null)
+		{
+			temp = temp.getNext();
+		}
+		data = temp.getNext().getData();
+		last = temp;
+		last.setNext(null);
+		return data;
+		
 	
 }
 	
-
+}
