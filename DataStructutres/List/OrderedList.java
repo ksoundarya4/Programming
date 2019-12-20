@@ -124,11 +124,11 @@ public T pop()
 {
 		T data = null;
 		Node<T> temp = head;
-		while(temp.getNext().getNext()!=null)
+		while(temp.getNext()!=null)
 		{
 			temp = temp.getNext();
 		}
-		data = temp.getNext().getData();
+		data = temp.getData();
 		last = temp;
 		last.setNext(null);
 		return data;
